@@ -3,7 +3,7 @@ select * from patients;
 select * from admissions; 
 SELECT first_name,last_name,gender FROM patients where gender='M' ; 
  update patientes set allergies = 'NKA' where allergies is NULL; 
- SELECT concat(first_name,last_name) as full_name from patients; 
+ SELECT concat(first_name,'',last_name) as full_name from patients; 
  SELECT count(*) as total_patients FROM patients where year(birth_date)=2010; 
  SELECT first_name,last_name,height FROM patients where height = (select max(height)from patients);  
  SELECT count(*) as total_admissions FROM admissions ;
